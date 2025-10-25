@@ -1,5 +1,5 @@
 // API基础配置 - 修正后端地址和端点
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = import.meta.env.VITE_API_URL ||'http://localhost:8080';
 
 // ============ 请求参数 - 完全匹配后端AnalysisRequest ============
 export interface ContractFile {

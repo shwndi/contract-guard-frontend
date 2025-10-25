@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Wifi, CheckCircle, XCircle, Clock, Server, Globe } from 'lucide-react';
 import { contractAPI } from '../services/contractAPI';
-
+const API_BASE_URL = import.meta.env.VITE_API_URL ||'http://localhost:8080';
 const TestConnection: React.FC = () => {
   const [status, setStatus] = useState<string>('未测试');
   const [loading, setLoading] = useState(false);
@@ -87,7 +87,7 @@ const TestConnection: React.FC = () => {
                   <Server className="h-8 w-8 text-green-600 mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-green-900">后端服务 (Windows)</p>
-                    <p className="text-sm text-green-600 font-mono">http://localhost:8080</p>
+                    <p className="text-sm text-green-600 font-mono">{API_BASE_URL}</p>
                     <p className="text-xs text-green-500">Spring Boot应用服务器</p>
                   </div>
                 </div>
