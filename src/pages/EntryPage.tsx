@@ -7,7 +7,7 @@ const EntryPage: React.FC = () => {
     // 这里写逻辑
     const navigate = useNavigate();  // 获取路由跳转函数
     const canvasRef = useRef<HTMLCanvasElement>(null);  // Canvas 引用
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });  // 鼠标位置
+    const [_mousePos, setMousePos] = useState({ x: 0, y: 0 });  // 鼠标位置
 
     useEffect(() => {
         const canvas = canvasRef.current;
