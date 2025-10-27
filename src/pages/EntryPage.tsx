@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+// @ts-ignore: CSS module types missing in this project setup
 import styles from './EntryPage.module.css';
 
 const EntryPage: React.FC = () => {

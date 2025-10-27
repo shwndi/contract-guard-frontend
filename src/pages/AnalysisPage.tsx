@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Shield, Code, Zap, AlertTriangle, FileText, Plus, X, Briefcase, CheckCircle, DollarSign, Wrench } from 'lucide-react';
-import type { ContractFile, BusinessContext, AnalysisRequest, AnalysisResult } from '../services/contractAPI';
+import { Shield, Code, Zap, AlertTriangle, FileText, Plus, X, Briefcase, Wrench } from 'lucide-react';
+import type { ContractFile, BusinessContext, AnalysisResult } from '../services/contractAPI';
 import { contractAPI } from '../services/contractAPI';
 
 const AnalysisPage: React.FC = () => {
@@ -16,7 +16,7 @@ const AnalysisPage: React.FC = () => {
     securityRequirements: ''
   });
   
-  const [analysisType, setAnalysisType] = useState<'security' | 'gas' | 'business' | 'all'>('all');
+  const [analysisType] = useState<'security' | 'gas' | 'business' | 'all'>('all');
   const [analyzing, setAnalyzing] = useState(false);
   const [result, setResult] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState<string | null>(null);
